@@ -12,3 +12,28 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A; /* Obsidian */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A; /* Gunmetal */
+  border-radius: 5px;
+  border: 2px solid #0A0A0A; /* Creates padding around thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C0C0C0; /* Metallic Silver */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2A2A2A #0A0A0A;
+}
