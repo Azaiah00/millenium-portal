@@ -21,13 +21,13 @@ import DetailedProposalSection from "@/components/DetailedProposalSection";
 /** Placeholder ad creatives for Section 4 masonry gallery */
 const AESTHETIC_GALLERY_ITEMS = [
   { src: "/ad-mockup-1.png", alt: "Corporate Security Guard", className: "md:col-span-2 md:row-span-1" },
-  { src: "/ad-mockup-5.png", alt: "B2B Corporate Handshake", className: "md:col-span-1 md:row-span-1" },
-  { src: "/ad-mockup-6.png", alt: "Training Academy Tablet", className: "md:col-span-1 md:row-span-1" },
+  { src: "/ad-mockup-9.png", alt: "B2B Threat Audit Ad", className: "md:col-span-1 md:row-span-1" },
+  { src: "/ad-mockup-10.png", alt: "Academy Recruitment Ad", className: "md:col-span-1 md:row-span-1" },
   { src: "/ad-mockup-7.png", alt: "Executive VIP Protection", className: "md:col-span-1 md:row-span-2" },
-  { src: "/ad-mockup-2.png", alt: "Secure Transportation Convoy", className: "md:col-span-2 md:row-span-1" },
-  { src: "/ad-mockup-8.png", alt: "Threat Diagnostic Scorecard", className: "md:col-span-1 md:row-span-1" },
+  { src: "/ad-mockup-12.png", alt: "Event Security Commander", className: "md:col-span-2 md:row-span-1" },
+  { src: "/ad-mockup-11.png", alt: "Secure Chauffeur Services", className: "md:col-span-1 md:row-span-1" },
   { src: "/ad-mockup-3.png", alt: "Tactical Training Academy", className: "md:col-span-2 md:row-span-1" },
-  { src: "/ad-mockup-4.png", alt: "High-Tech Access Control", className: "md:col-span-1 md:row-span-1" },
+  { src: "/ad-mockup-8.png", alt: "Threat Diagnostic Scorecard", className: "md:col-span-1 md:row-span-1" },
 ] as const;
 
 export default function Home() {
