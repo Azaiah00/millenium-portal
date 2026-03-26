@@ -16,6 +16,7 @@ import {
   Lock,
 } from "lucide-react";
 import GrowthSystemSection from "@/components/GrowthSystemSection";
+import DetailedProposalSection from "@/components/DetailedProposalSection";
 
 /** Placeholder ad creatives for Section 4 masonry gallery */
 const AESTHETIC_GALLERY_ITEMS = [
@@ -48,7 +49,7 @@ export default function Home() {
   }, [lightboxAsset, closeLightbox]);
 
   return (
-    <main className="flex flex-col w-full">
+    <div className="flex min-w-0 w-full flex-col">
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center overflow-hidden py-20">
         {/* Subtle Background Grid */}
@@ -59,7 +60,7 @@ export default function Home() {
           
           {/* Animated Logo Container */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative mb-12"
@@ -97,7 +98,7 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-crisp mb-6 leading-tight"
@@ -107,7 +108,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base sm:text-lg md:text-xl text-metallic/80 max-w-3xl mb-12 leading-relaxed"
@@ -120,7 +121,7 @@ export default function Home() {
 
           {/* Feature Highlights */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl"
@@ -162,7 +163,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold text-crisp mb-6 leading-tight">
@@ -188,7 +189,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
@@ -263,7 +264,7 @@ export default function Home() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
@@ -284,7 +285,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.7 }}
             className="relative mb-16 rounded-xl border border-zinc-500 bg-[#1A1A1A] p-8 sm:p-10 shadow-[0_0_24px_rgba(0,0,0,0.4)] transition-shadow duration-300 hover:shadow-[0_0_28px_rgba(192,192,192,0.08)]"
           >
@@ -324,7 +325,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="group relative bg-[#1A1A1A] rounded-xl p-8 border border-zinc-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(192,192,192,0.15)] hover:-translate-y-1"
             >
@@ -339,7 +340,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="group relative bg-[#1A1A1A] rounded-xl p-8 border border-zinc-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(192,192,192,0.15)] hover:-translate-y-1"
             >
@@ -354,7 +355,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, amount: 0.12 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="group relative bg-[#1A1A1A] rounded-xl p-8 border border-zinc-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(192,192,192,0.15)] hover:-translate-y-1"
             >
@@ -378,7 +379,7 @@ export default function Home() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
@@ -397,7 +398,7 @@ export default function Home() {
                 key={idx}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true, amount: 0.12 }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className={`group relative overflow-hidden rounded-xl border border-zinc-700 bg-[#111111] ${img.className}`}
               >
@@ -437,7 +438,7 @@ export default function Home() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-3xl mx-auto mb-16"
           >
@@ -452,7 +453,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative bg-gunmetal border border-zinc-500 p-8 sm:p-12 shadow-[0_0_40px_rgba(192,192,192,0.1)] mx-auto max-w-4xl"
           >
@@ -492,6 +493,8 @@ export default function Home() {
         </div>
       </section>
 
+      <DetailedProposalSection />
+
       {/* Lightbox: full-bleed asset view */}
       <AnimatePresence>
         {lightboxAsset ? (
@@ -503,7 +506,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
+            className="fixed inset-0 z-[100] flex max-h-[100dvh] w-full max-w-[100vw] items-center justify-center overflow-y-auto p-4 sm:p-8"
           >
             <button
               type="button"
@@ -542,6 +545,6 @@ export default function Home() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-    </main>
+    </div>
   );
 }

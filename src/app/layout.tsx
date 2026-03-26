@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans bg-obsidian text-crisp antialiased min-h-screen flex flex-col`}>
+      <body className={`${inter.variable} font-sans bg-obsidian text-crisp antialiased min-h-screen flex flex-col overflow-x-hidden`}>
         <Navbar />
-        <main className="flex-grow">
+        <main className="min-h-0 min-w-0 flex flex-1 flex-col">
           {children}
         </main>
       </body>

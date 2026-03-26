@@ -27,7 +27,7 @@ export default function GrowthSystemSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.75 }}
           className="mx-auto mb-14 max-w-3xl text-center"
         >
@@ -46,7 +46,7 @@ export default function GrowthSystemSection() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.6 }}
           className="mb-14 flex flex-wrap justify-center gap-3"
         >
@@ -64,7 +64,7 @@ export default function GrowthSystemSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.65 }}
           className="mb-16"
         >
@@ -106,7 +106,7 @@ export default function GrowthSystemSection() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.65 }}
             className="border border-zinc-600 bg-[#141414] p-8"
           >
@@ -140,7 +140,7 @@ export default function GrowthSystemSection() {
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.65 }}
             className="border border-zinc-600 bg-[#141414] p-8"
           >
@@ -174,7 +174,7 @@ export default function GrowthSystemSection() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.7 }}
           className="mt-16"
         >
@@ -212,7 +212,7 @@ export default function GrowthSystemSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.65 }}
           className="mt-16 grid gap-8 border border-zinc-700 bg-[#0d0d0d] p-8 lg:grid-cols-2"
         >
