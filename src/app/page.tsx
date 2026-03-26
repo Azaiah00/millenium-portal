@@ -366,7 +366,7 @@ export default function Home() {
                 <div className="relative aspect-[16/10] w-full">
                   <Image
                     src="/mock-site-preview.png"
-                    alt="Screenshot of the remodeled Millenium security mock website hero"
+                    alt="Screenshot of the remodeled Millenium mock site: navigation, hero headline, and shield logo"
                     fill
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
                     sizes="(max-width: 768px) 100vw, min(1280px, 100vw)"
