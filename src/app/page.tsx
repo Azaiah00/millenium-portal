@@ -15,6 +15,7 @@ import {
   X,
   Lock,
 } from "lucide-react";
+import GrowthSystemSection from "@/components/GrowthSystemSection";
 
 /** Placeholder ad creatives for Section 4 masonry gallery */
 const AESTHETIC_GALLERY_ITEMS = [
@@ -270,7 +271,12 @@ export default function Home() {
               The Synergy <span className="text-metallic">Flywheel Architecture</span>
             </h2>
             <p className="text-lg text-metallic/80">
-              We will deploy high-converting funnels, AI-generated creatives, and targeted ad campaigns to unify your three distinct divisions into one revenue-generating machine.
+              We will deploy high-converting funnels, AI-generated creatives, and targeted ad campaigns to unify your three distinct divisions into one revenue-generating machine. The narrative is deliberate:{" "}
+              <span className="text-crisp font-medium">an owned academy elevates the caliber of officer you deploy</span>
+              —a defensible story premium competitors cannot copy overnight.
+            </p>
+            <p className="mt-6 text-sm font-semibold uppercase tracking-widest text-metallic/70">
+              Strategic priority: Security contracts lead · Academy builds authority &amp; recruiting · Transportation stays a selective supporting offer
             </p>
           </motion.div>
 
@@ -355,12 +361,16 @@ export default function Home() {
               <Shield className="w-10 h-10 text-metallic mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-crisp mb-4">Secure Transportation <br/><span className="text-sm text-metallic/70 font-normal uppercase tracking-wider">(Executive Detail)</span></h3>
               <p className="text-metallic/80 leading-relaxed">
-                We will design high-end, discreet AI visual assets and &quot;white-label&quot; brochures targeting UHNWIs and corporate executives, marketing the <span className="italic text-metallic font-medium">Invisible Veil of Professionalism</span>.
+                We will design high-end, discreet AI visual assets and &quot;white-label&quot; brochures targeting UHNWIs and corporate executives—and deploy the{" "}
+                <span className="italic text-metallic font-medium">Corporate Executive Travel Risk Checklist</span>{" "}
+                for assistants and travel planners—marketing the <span className="italic text-metallic font-medium">Invisible Veil of Professionalism</span>.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
+
+      <GrowthSystemSection />
 
       {/* Section 4: The 30-Day Aesthetic Takeover */}
       <section className="relative py-24 bg-obsidian border-t border-gunmetal overflow-hidden">
@@ -457,7 +467,9 @@ export default function Home() {
                 "Complete Conversion-Optimized Website Overhaul",
                 "30-Day Instagram Grid & Social Proof Launch",
                 "The Facility Threat Scorecard B2B Lead Funnel",
-                "High-Fidelity AI Ad Creatives & Video Production"
+                "High-Fidelity AI Ad Creatives & Video Production",
+                "Google Business Profile + Local SEO & Citation Alignment",
+                "Ethical Review Acquisition System & Lead KPI Instrumentation",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start bg-[#1A1A1A] p-4 border border-zinc-700/50 hover:border-metallic/50 transition-colors duration-300">
                   <CheckCircle className="w-6 h-6 text-metallic mr-4 flex-shrink-0 mt-0.5" />

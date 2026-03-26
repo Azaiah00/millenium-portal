@@ -1,0 +1,8 @@
+# Netlify runs Next.js 14 correctly only with the official runtime plugin.
+# Without it, CSS/SSR chunks often fail and the site can render as unstyled HTML.
+
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
