@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import { 
   FileText, 
   Target, 
-  Instagram, 
   Settings, 
   CheckCircle2, 
   TrendingUp, 
   ShieldCheck,
   Calendar,
-  Clock
+  Clock,
+  Smartphone
 } from "lucide-react";
 
 export default function DetailedProposalSection() {
@@ -30,9 +30,9 @@ export default function DetailedProposalSection() {
       goals: ["Build trust faster", "Present as established/professional", "Encourage more inquiries"]
     },
     {
-      title: "2. Monthly Instagram Management",
+      title: "2. Monthly Social Management",
       investment: "$1,000 / Month",
-      icon: Instagram,
+      icon: Smartphone,
       items: [
         "Complete content strategy & planning",
         "Graphic design & branded post creation",
@@ -127,39 +127,42 @@ export default function DetailedProposalSection() {
 
         {/* Services Grid */}
         <div className="grid gap-8 mb-24">
-          {sections.map((section, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.12 }}
-              transition={{ delay: idx * 0.1 }}
-              className="group relative bg-[#0A0A0A] border border-zinc-800 p-8 sm:p-10 hover:border-metallic/30 transition-all duration-500"
-            >
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                <div className="max-w-2xl">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="p-3 bg-gunmetal rounded-lg text-metallic group-hover:scale-110 transition-transform duration-500">
-                      <section.icon className="w-6 h-6" />
+          {sections.map((section, idx) => {
+            const Icon = section.icon;
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{ delay: idx * 0.1 }}
+                className="group relative bg-[#0A0A0A] border border-zinc-800 p-8 sm:p-10 hover:border-metallic/30 transition-all duration-500"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+                  <div className="max-w-2xl">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="p-3 bg-gunmetal rounded-lg text-metallic group-hover:scale-110 transition-transform duration-500">
+                        <Icon className="w-6 h-6" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-crisp">{section.title}</h3>
                     </div>
-                    <h3 className="text-2xl font-bold text-crisp">{section.title}</h3>
+                    <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                      {section.items.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm text-metallic/70">
+                          <CheckCircle2 className="w-4 h-4 text-metallic mt-0.5 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-metallic/70">
-                        <CheckCircle2 className="w-4 h-4 text-metallic mt-0.5 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="lg:text-right flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-zinc-800 pt-8 lg:pt-0 lg:pl-12">
+                    <p className="text-xs font-bold uppercase tracking-widest text-metallic/50 mb-1">Investment</p>
+                    <p className="text-3xl font-black text-crisp">{section.investment}</p>
+                  </div>
                 </div>
-                <div className="lg:text-right flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-zinc-800 pt-8 lg:pt-0 lg:pl-12">
-                  <p className="text-xs font-bold uppercase tracking-widest text-metallic/50 mb-1">Investment</p>
-                  <p className="text-3xl font-black text-crisp">{section.investment}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Why This Strategy */}
@@ -182,13 +185,16 @@ export default function DetailedProposalSection() {
               { icon: TrendingUp, label: "Data-Driven", desc: "Guide future growth" },
               { icon: ShieldCheck, label: "Professional", desc: "Reflect your strength" },
               { icon: Calendar, label: "Consistent", desc: "Relevant & active online" }
-            ].map((feature, i) => (
-              <div key={feature.label} className="flex flex-col gap-2">
-                <feature.icon className="w-5 h-5 text-metallic" />
-                <p className="text-crisp font-bold text-sm uppercase tracking-wider">{feature.label}</p>
-                <p className="text-xs text-metallic/60">{feature.desc}</p>
-              </div>
-            ))}
+            ].map((feature) => {
+              const Icon = feature.icon;
+              return (
+                <div key={feature.label} className="flex flex-col gap-2">
+                  <Icon className="w-5 h-5 text-metallic" />
+                  <p className="text-crisp font-bold text-sm uppercase tracking-wider">{feature.label}</p>
+                  <p className="text-xs text-metallic/60">{feature.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
