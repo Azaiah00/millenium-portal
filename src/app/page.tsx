@@ -136,7 +136,7 @@ export default function Home() {
               {
                 icon: Sparkles,
                 title: "Visual Authority",
-                desc: "Elite AI-driven brand aesthetic.",
+                desc: "Elite custom brand aesthetic.",
               },
               {
                 icon: Funnel,
@@ -437,7 +437,7 @@ export default function Home() {
               <Shield className="w-10 h-10 text-metallic mb-6 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="text-xl font-bold text-crisp mb-4">Secure Transportation <br/><span className="text-sm text-metallic/70 font-normal uppercase tracking-wider">(Executive Detail)</span></h3>
               <p className="text-metallic/80 leading-relaxed">
-                We will design high-end, discreet AI visual assets and &quot;white-label&quot; brochures targeting UHNWIs and corporate executives—and deploy the{" "}
+                We will design high-end, discreet custom visual assets and &quot;white-label&quot; brochures targeting UHNWIs and corporate executives—and deploy the{" "}
                 <span className="italic text-metallic font-medium">Corporate Executive Travel Risk Checklist</span>{" "}
                 for assistants and travel planners—marketing the <span className="italic text-metallic font-medium">Invisible Veil of Professionalism</span>.
               </p>
@@ -543,7 +543,7 @@ export default function Home() {
                 "Complete Conversion-Optimized Website Overhaul",
                 "30-Day Instagram Grid & Social Proof Launch",
                 "The Facility Threat Scorecard B2B Lead Funnel",
-                "High-Fidelity AI Ad Creatives & Video Production",
+                "High-Fidelity Custom Ad Creatives & Video Production",
                 "Google Business Profile + Local SEO & Citation Alignment",
                 "Ethical Review Acquisition System & Lead KPI Instrumentation",
               ].map((item, idx) => (
