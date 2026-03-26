@@ -14,6 +14,7 @@ import {
   Shield,
   X,
   Lock,
+  ExternalLink,
 } from "lucide-react";
 import GrowthSystemSection from "@/components/GrowthSystemSection";
 import DetailedProposalSection from "@/components/DetailedProposalSection";
@@ -316,6 +317,80 @@ export default function Home() {
                 . We don&apos;t build digital brochures; we build high-performance, intent-based
                 routing engines designed to convert Central Virginia property managers into
                 high-ticket contracts.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Live remodeled mock-site preview ($500 revamp direction) */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.12 }}
+            transition={{ duration: 0.7 }}
+            className="relative mb-16 overflow-hidden rounded-xl border border-zinc-500 bg-[#141414] shadow-[0_0_28px_rgba(0,0,0,0.45)]"
+          >
+            <div className="border-b border-zinc-700 bg-[#1f1f1f] px-4 py-3 sm:px-6">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-metallic/80">
+                Executable preview
+              </p>
+              <h3 className="text-lg font-bold text-crisp sm:text-xl">
+                Remodeled mock site — included in the{" "}
+                <span className="text-metallic">$500 website revamp</span>
+              </h3>
+              <p className="mt-2 max-w-3xl text-sm text-metallic/75">
+                Explore a live direction for hero messaging, service clarity, and conversion layout.
+                Click the window below to open the full experience in a new tab.
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-6">
+              <div className="overflow-hidden rounded-t-lg border border-b-0 border-zinc-600 bg-[#2a2a2a]">
+                <div className="flex items-center gap-3 px-3 py-2.5 sm:px-4">
+                  <div className="flex gap-1.5">
+                    <span className="h-2.5 w-2.5 rounded-full bg-red-500/90" aria-hidden />
+                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/90" aria-hidden />
+                    <span className="h-2.5 w-2.5 rounded-full bg-green-500/90" aria-hidden />
+                  </div>
+                  <div className="min-w-0 flex-1 truncate rounded-md border border-zinc-600 bg-[#0d0d0d] px-3 py-1.5 text-left font-mono text-[11px] text-metallic/80 sm:text-xs">
+                    milleniumsecurity.netlify.app
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://milleniumsecurity.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-b-lg border border-t-0 border-zinc-600 bg-[#0a0a0a] ring-zinc-700 transition-all hover:ring-2 hover:ring-metallic/40 focus:outline-none focus-visible:ring-2 focus-visible:ring-metallic"
+              >
+                <div className="relative aspect-[16/10] w-full">
+                  <Image
+                    src="/mock-site-preview.png"
+                    alt="Screenshot of the remodeled Millenium security mock website hero"
+                    fill
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes="(max-width: 768px) 100vw, min(1280px, 100vw)"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-obsidian/0 transition-colors group-hover:bg-obsidian/35">
+                    <span className="flex items-center gap-2 rounded-md border border-metallic/60 bg-obsidian/90 px-4 py-2.5 text-sm font-semibold text-crisp opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                      <ExternalLink className="h-4 w-4" />
+                      Open live mock site
+                    </span>
+                  </div>
+                </div>
+              </a>
+
+              <p className="mt-4 text-center text-sm text-metallic/70">
+                <span className="font-medium text-metallic">Click the preview above</span> to view the full site, or open:{" "}
+                <a
+                  href="https://milleniumsecurity.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 break-all text-metallic underline decoration-metallic/40 underline-offset-4 transition-colors hover:text-crisp hover:decoration-crisp"
+                >
+                  https://milleniumsecurity.netlify.app/
+                  <ExternalLink className="h-3.5 w-3.5 flex-shrink-0" />
+                </a>
               </p>
             </div>
           </motion.div>
