@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   FileText, 
@@ -30,7 +31,7 @@ export default function DetailedProposalSection() {
       goals: ["Build trust faster", "Present as established/professional", "Encourage more inquiries"]
     },
     {
-      title: "2. Monthly Social Management",
+      title: "2. Monthly Social & Google Ad Management",
       investment: "$1,000 / Month",
       icon: Smartphone,
       items: [
@@ -39,7 +40,10 @@ export default function DetailedProposalSection() {
         "Caption writing, posting & scheduling",
         "Hashtag strategy & profile optimization",
         "Reels/Story content implementation",
-        "Campaign management for Academy & Transport"
+        "Instagram campaign management for Academy & Transport",
+        "Google Ad management: account structure, keywords, and ongoing optimization",
+        "Search campaigns aligned with Training Academy & Transportation lead goals",
+        "Ad performance reviews tied to monthly reporting"
       ],
       focus: ["Training Academy leads", "Transportation inquiries", "Brand awareness"]
     },
@@ -52,6 +56,7 @@ export default function DetailedProposalSection() {
         "On-page SEO & structure optimization",
         "Search-friendly content updates",
         "Analytics tracking (Traffic, Behavior, Leads)",
+        "Landing-page and conversion signals to support Google Ads & SEO",
         "Monthly performance data reports"
       ]
     }
@@ -93,7 +98,8 @@ export default function DetailedProposalSection() {
               Proposal Overview
             </h3>
             <p className="text-metallic/80 leading-relaxed text-sm sm:text-base">
-              The main opportunity now is to build a stronger digital presence that reflects the professionalism of the company and helps turn online visitors into real customers. This proposal creates a connected system where the website, Instagram, content, SEO, and reporting all work together.
+              The main opportunity now is to build a stronger digital presence that reflects the professionalism of the company and helps turn online visitors into real customers. This proposal creates a connected system where the website, Instagram,{" "}
+              <span className="text-crisp font-medium">Google Ad management</span>, content, SEO, and reporting all work together.
             </p>
           </motion.div>
 
@@ -112,6 +118,7 @@ export default function DetailedProposalSection() {
                 "Improve online image",
                 "Modernize the website",
                 "Active Instagram presence",
+                "Google Ad management for high-intent leads",
                 "Increase Academy awareness",
                 "Generate Transport leads",
                 "Implement strong SEO"
@@ -177,7 +184,8 @@ export default function DetailedProposalSection() {
             Why this strategy makes sense for <span className="text-metallic">The Millenium Corp</span>
           </h3>
           <p className="text-metallic/80 max-w-4xl mx-auto mb-12 leading-relaxed">
-            The Millenium Corp already has the foundation of a strong business. Rather than offering isolated services, this proposal creates a connected system where your website, social presence, and data-driven decisions all compound to build local dominance.
+            The Millenium Corp already has the foundation of a strong business. Rather than offering isolated services, this proposal creates a connected system where your website, social presence,{" "}
+            <span className="text-metallic font-semibold">Google Ad management</span>, and data-driven decisions all compound to build local dominance.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-left max-w-5xl mx-auto">
             {[
@@ -198,8 +206,23 @@ export default function DetailedProposalSection() {
           </div>
         </motion.div>
 
-        {/* Term of Service Footer */}
-        <div className="mt-16 text-center">
+        {/* Agency Branding & Term of Service Footer */}
+        <div className="mt-24 text-center flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <Image 
+              src="/couture-house-logo.png" 
+              alt="Couture House Co. Logo" 
+              width={140} 
+              height={140} 
+              className="object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
+            />
+          </motion.div>
+
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-metallic/40 mb-4">Term of Service</p>
           <p className="text-sm text-metallic/60 max-w-2xl mx-auto italic">
             A monthly service structure is recommended to allow enough time to build momentum, improve visibility, gather performance data, and strengthen results over time.
