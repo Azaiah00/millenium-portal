@@ -273,7 +273,7 @@ export default function Home() {
               The Synergy <span className="text-metallic">Flywheel Architecture</span>
             </h2>
             <p className="text-lg text-metallic/80">
-              We will deploy high-converting funnels, AI-generated creatives, and targeted ad campaigns to unify your three distinct divisions into one revenue-generating machine. The narrative is deliberate:{" "}
+              We will deploy high-converting funnels, custom ad creatives, and targeted ad campaigns to unify your three distinct divisions into one revenue-generating machine. The narrative is deliberate:{" "}
               <span className="text-crisp font-medium">an owned academy elevates the caliber of officer you deploy</span>
               —a defensible story premium competitors cannot copy overnight.
             </p>
