@@ -6,6 +6,9 @@
 # site's "primary" and Netlify 301s the .netlify.app host to it. Fix: use a
 # separate Netlify site for this portal with no client custom domain, OR set the
 # primary domain to this *.netlify.app URL only (not the client's live site).
+#
+# Note: Netlify build env `URL` is always the *primary* domain. Do not use it for
+# Open Graph in this app — see PORTAL_CANONICAL_URL in layout.tsx.
 
 [build]
   command = "npm run build"

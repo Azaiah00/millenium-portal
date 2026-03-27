@@ -6,17 +6,22 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 /**
- * Netlify sets URL / DEPLOY_PRIME_URL at build time so Open Graph and canonical
- * URLs always match this deployment (not localhost). Fallback keeps link previews
- * correct when env vars are missing (e.g. some local builds).
+ * Never use Netlify's `URL` (or `DEPLOY_PRIME_URL`) for this app's metadata.
+ * Those vars resolve to the site's *primary* domain. If themilleniumcorp.com is
+ * set as primary on the same Netlify site, `URL` becomes that domain — then
+ * metadataBase, og:url, and canonical all advertise the public site. iMessage,
+ * SMS, Slack, etc. then preview/link to themilleniumcorp.com even when the user
+ * shared millenium-portal.netlify.app.
+ *
+ * Optional: set PORTAL_CANONICAL_URL in Netlify if you later use a dedicated
+ * portal hostname (must stay the URL you actually share).
  */
-const siteUrl =
-  process.env.URL ||
-  process.env.DEPLOY_PRIME_URL ||
-  "https://millenium-portal.netlify.app";
+const portalOrigin = (
+  process.env.PORTAL_CANONICAL_URL || "https://millenium-portal.netlify.app"
+).replace(/\/$/, "");
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(`${portalOrigin}/`),
   title: {
     default: "Millenium Client Portal | Couture House Co.",
     template: "%s | Millenium Client Portal",
@@ -24,12 +29,12 @@ export const metadata: Metadata = {
   description:
     "Private strategy and proposal portal for The Millenium Corp (Couture House Co.). Not the public company website.",
   alternates: {
-    canonical: "/",
+    canonical: `${portalOrigin}/`,
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
+    url: `${portalOrigin}/`,
     siteName: "Millenium Client Portal",
     title: "Millenium Client Portal | Couture House Co.",
     description:
