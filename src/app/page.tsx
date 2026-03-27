@@ -305,18 +305,9 @@ export default function Home() {
               </p>
               <p>
                 Before we scale your ads, Couture House Co. will execute a complete top-to-bottom
-                remodel of{" "}
-                <a
-                  href="https://themilleniumcorp.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-metallic underline decoration-metallic/40 underline-offset-4 transition-colors hover:text-crisp hover:decoration-crisp"
-                >
-                  themilleniumcorp.com
-                </a>
-                . We don&apos;t build digital brochures; we build high-performance, intent-based
-                routing engines designed to convert Central Virginia property managers into
-                high-ticket contracts.
+                remodel of your current public website. We don&apos;t build digital brochures; we
+                build high-performance, intent-based routing engines designed to convert Central
+                Virginia property managers into high-ticket contracts.
               </p>
             </div>
           </motion.div>

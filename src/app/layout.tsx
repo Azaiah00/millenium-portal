@@ -7,14 +7,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 /**
  * Never use Netlify's `URL` (or `DEPLOY_PRIME_URL`) for this app's metadata.
- * Those vars resolve to the site's *primary* domain. If themilleniumcorp.com is
- * set as primary on the same Netlify site, `URL` becomes that domain — then
- * metadataBase, og:url, and canonical all advertise the public site. iMessage,
- * SMS, Slack, etc. then preview/link to themilleniumcorp.com even when the user
- * shared millenium-portal.netlify.app.
+ * Those vars resolve to the site's *primary* domain (whatever is configured there).
+ * If that is a different hostname than this portal, og:url / canonical would point
+ * at the wrong place and link previews could show the wrong site.
  *
- * Optional: set PORTAL_CANONICAL_URL in Netlify if you later use a dedicated
- * portal hostname (must stay the URL you actually share).
+ * Optional: set PORTAL_CANONICAL_URL in Netlify if you use a dedicated portal hostname.
  */
 const portalOrigin = (
   process.env.PORTAL_CANONICAL_URL || "https://millenium-portal.netlify.app"
@@ -38,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Millenium Client Portal",
     title: "Millenium Client Portal | Couture House Co.",
     description:
-      "Private digital strategy portal — proposals, mock site preview, and growth roadmap. Opens at this link only; not themilleniumcorp.com.",
+      "Private digital strategy portal — proposals, mock site preview, and growth roadmap. This URL is the client portal only.",
   },
   twitter: {
     card: "summary_large_image",
