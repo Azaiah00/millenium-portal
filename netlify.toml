@@ -1,5 +1,11 @@
 # Netlify runs Next.js 14 correctly only with the official runtime plugin.
 # Without it, CSS/SSR chunks often fail and the site can render as unstyled HTML.
+#
+# If https://millenium-portal.netlify.app opens or redirects to the client's public
+# domain (e.g. themilleniumcorp.com), Domain management has that domain as this
+# site's "primary" and Netlify 301s the .netlify.app host to it. Fix: use a
+# separate Netlify site for this portal with no client custom domain, OR set the
+# primary domain to this *.netlify.app URL only (not the client's live site).
 
 [build]
   command = "npm run build"
