@@ -45,8 +45,8 @@ export default function DetailedProposalSection() {
                 Revised proposal
               </span>
             </div>
-            <span className="rounded-full border border-green-500/30 bg-green-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-green-400/90">
-              Active offer · $500 / mo
+            <span className="rounded-full border border-amber-400/50 bg-amber-400/15 px-3 py-1 text-xs font-black uppercase tracking-wider text-amber-200 shadow-[0_0_20px_rgba(251,191,36,0.15)]">
+              New package · $500 / mo
             </span>
           </div>
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.25em] text-metallic/60">
@@ -78,6 +78,9 @@ export default function DetailedProposalSection() {
             <p className="text-sm text-metallic/70">Website revamp</p>
           </div>
           <div className="relative overflow-hidden rounded-xl border border-metallic/30 bg-gradient-to-br from-metallic/10 to-[#0a0a0a] p-8 text-center ring-1 ring-metallic/20">
+            <div className="absolute left-0 top-0 rounded-br-lg border-b border-r border-amber-400/40 bg-amber-500/20 px-2.5 py-1 text-[10px] font-black uppercase tracking-widest text-amber-100">
+              New
+            </div>
             <div className="absolute right-0 top-0 rounded-bl-lg bg-metallic/15 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-metallic">
               Monthly
             </div>
@@ -226,7 +229,15 @@ export default function DetailedProposalSection() {
                 <div className="rounded-lg bg-metallic/10 p-3 text-metallic">
                   <Smartphone className="h-6 w-6" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
+                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center rounded border border-amber-400/55 bg-amber-500/20 px-2 py-0.5 text-[10px] font-black uppercase tracking-[0.15em] text-amber-100">
+                      New
+                    </span>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-metallic/50">
+                      Updated monthly scope
+                    </span>
+                  </div>
                   <h3 className="text-2xl font-bold text-crisp">
                     Monthly digital marketing &amp; website support
                   </h3>
@@ -381,8 +392,13 @@ export default function DetailedProposalSection() {
               <span>Website revamp</span>
               <span className="font-mono font-bold">$500 one-time</span>
             </div>
-            <div className="flex justify-between py-3 text-crisp">
-              <span className="pr-4">Monthly digital marketing &amp; website support</span>
+            <div className="flex flex-wrap items-center justify-between gap-2 py-3 text-crisp">
+              <span className="flex flex-wrap items-center gap-2 pr-4">
+                <span className="rounded border border-amber-400/50 bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-amber-100">
+                  New
+                </span>
+                Monthly digital marketing &amp; website support
+              </span>
               <span className="shrink-0 font-mono font-bold">$500/mo</span>
             </div>
             <p className="mt-3 text-center text-xs text-metallic/55">
