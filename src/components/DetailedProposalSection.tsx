@@ -287,13 +287,19 @@ export default function DetailedProposalSection() {
                   </ul>
                 </div>
               </div>
-              <p className="mt-8 flex items-start gap-2 rounded-lg border border-zinc-800 bg-black/40 p-4 text-xs text-metallic/65">
-                <BarChart3 className="mt-0.5 h-4 w-4 flex-shrink-0 text-metallic/50" />
-                Because you already run Google Ads, this monthly scope is built to{" "}
-                <span className="font-medium text-metallic">complement</span> those efforts—organic
-                presence, brand consistency, Academy/Transport promotion, and a professional site +
-                Instagram layer—not replace your paid search.
-              </p>
+              {/* Icon + copy in a flex row, but all copy lives in ONE child so "complement" is not its own flex column */}
+              <div className="mt-8 flex gap-3 rounded-lg border border-zinc-800 bg-black/40 p-4">
+                <BarChart3
+                  className="mt-0.5 h-4 w-4 flex-shrink-0 text-metallic/50"
+                  aria-hidden
+                />
+                <p className="min-w-0 flex-1 text-xs leading-relaxed text-metallic/65">
+                  Because you already run Google Ads, this monthly scope is built to{" "}
+                  <span className="font-medium text-metallic">complement</span> those efforts—organic
+                  presence, brand consistency, Academy/Transport promotion, and a professional site +
+                  Instagram layer—not replace your paid search.
+                </p>
+              </div>
             </div>
             <div className="flex flex-col justify-center border-t border-zinc-800 pt-8 text-center lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0 lg:text-right">
               <p className="mb-1 text-xs font-bold uppercase tracking-widest text-metallic/50">
